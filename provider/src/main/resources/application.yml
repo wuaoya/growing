@@ -1,0 +1,25 @@
+server:
+  port: 8902
+spring:
+  application:
+    name: provider
+  profiles:
+    default: default
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+    loadbalancer:
+      cache:
+        enabled: false
+#springdoc:
+#  swagger-ui:
+#    enabled: true  #开启/禁止swagger,prod可以设置为false
+#    path: /swagger-ui.html  #swagger页面
+#  api-docs:
+#    enabled: true #开启/禁止api-docs, prod可以设置为false
+#    path: /api-docs #api的json文档
+
+

@@ -1,0 +1,12 @@
+server:
+  port: 8901
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    loadbalancer:
+      cache:
+        enabled: false
+  application:
+    name: consumer
