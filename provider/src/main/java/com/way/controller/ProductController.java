@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 提供服务测试openFeign
+ */
 @RestController
 @RequestMapping("/pro")
 @Tag(name = "openFeign")

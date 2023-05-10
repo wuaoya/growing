@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 
+/**
+ * nacos配置中心服务测试
+ */
 @RefreshScope
 @RestController
 @RequestMapping("/body")
