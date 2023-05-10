@@ -1,14 +1,25 @@
 package com.way.controller;
 
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
+
+@RefreshScope
 @RestController
 @RequestMapping("/body")
 
 public class BodyController {
+    @Value("${test.infos}")
+    public String infos;
+
     @RequestMapping("/test")
     public String test(){
-        return "test";
+        System.out.println(new Date());
+        return infos;
+
     }
 }
+

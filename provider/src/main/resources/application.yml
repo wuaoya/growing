@@ -4,12 +4,15 @@ spring:
   application:
     name: provider
   profiles:
-    default: default
+    active: dev
 
   cloud:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
 
     loadbalancer:
       cache:
@@ -21,5 +24,7 @@ spring:
 #  api-docs:
 #    enabled: true #开启/禁止api-docs, prod可以设置为false
 #    path: /api-docs #api的json文档
+test:
+  infos: 123
 
 

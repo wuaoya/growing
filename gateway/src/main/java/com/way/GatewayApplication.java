@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
- * 注意，gateway组件必须使用webflux响应式编程并且使用netty作为web容器，提升性能
+ * 注意，gateway组件基于webflux响应式编程并且使用netty作为web容器，提升性能
  */
 @EnableDiscoveryClient
 @SpringBootApplication
