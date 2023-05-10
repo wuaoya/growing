@@ -3,6 +3,8 @@ server:
 spring:
   application:
     name: gateway
+  profiles:
+    active: dev
   cloud:
     nacos:
       discovery:
@@ -10,9 +12,14 @@ spring:
     gateway:
       discovery:
         locator:
-          enabled: true
-    loadbalancer:
-      cache:
-        enabled: false
-
+          enabled: false
+      routes:
+        - id: routeId1
+          uri: lb://provider
+          predicates:
+            - Path=/body/**
+        - id: routeId2
+          uri: lb://consumer
+          predicates:
+            - Path=/product/**
 
