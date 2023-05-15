@@ -1,5 +1,6 @@
 package com.way.service;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -13,5 +14,6 @@ public interface SpringProvider {
      * @return
      */
     @GetMapping("/pro/test1")
+    @SentinelResource(value = "call")
      String call();
 }
