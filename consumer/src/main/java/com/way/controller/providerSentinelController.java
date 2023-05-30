@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * sentinel做流控，
+ * sentinel做流控
  */
 @RestController
 @RequestMapping("/provider")

@@ -28,6 +28,14 @@
         <module>consumer</module>
     </modules>
 
+    <!--快照库-->
+    <repositories>
+        <repository>
+            <id>snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
+
     <!--依赖-->
     <dependencyManagement>
         <dependencies>
